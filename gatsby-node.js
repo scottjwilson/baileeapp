@@ -47,7 +47,7 @@ exports.createPages = ({ graphql, actions }) => {
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
 
-  if (node.internal.type === `contentfulPost`) {
+  if (node.internal.type === `ContentfulPost`) {
     const value = createFilePath({ node, getNode })
     createNodeField({
       name: `slug`,
